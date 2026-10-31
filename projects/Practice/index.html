@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>DOM practice</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="hero-title">Build a business that can grow.</h1>
+      <p class="hero-description">
+        We help businesses improve their strategy and operations.
+      </p>
+      <button id="consultation-btn">Book a Consultation</button>
+      <p id="feedback"></p>
+      <button id="contact-btn">Contact</button>
+      <p id="contact"></p>
+      <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
+        Menu
+      </button>
+      <nav id="mobile-menu">
+        <a href="#services">Services</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+      </nav>
+
+      <button id="status-btn">Check Status</button>
+      <p id="status-message">The menu is closed.</p>
+
+      <label for="name-input">Your name</label>
+      <input type="text" id="name-input" placeholder="Enter your name" />
+      <button id="greet-btn">Continue</button>
+
+      <p id="greeting-message"></p>
+
+      <form id="contact-form">
+        <label for="client-name">Your Name</label>
+        <input
+          type="text"
+          id="client-name"
+          placeholder="Enter your name"
+          name="name"
+          required
+        />
+
+        <label for="client-email">Your Email</label>
+        <input
+          type="email"
+          id="client-email"
+          placeholder="Enter your email"
+          name="email"
+          required
+        />
+
+        <button type="submit">Send Enquiry</button>
+        <button type="button" id="validity-btn">Check Validity</button>
+      </form>
+
+      <p id="form-message"></p>
+      <p id="validity-mssg"></p>
+    </main>
+  </body>
+</html>

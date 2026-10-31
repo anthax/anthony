@@ -1,0 +1,37 @@
+body {
+  background-color: #f5f2eb;
+  color: #17243a;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.hero-title {
+  font-size: 40px;
+}
+
+.hero-description {
+  font-size: 18px;
+}
+
+#contact-btn {
+  background-color: #17243a;
+  color: #f5f2eb;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+#contact-btn.active {
+  background-color: #2d6a68;
+}
+
+#mobile-menu {
+  display: none;
+}
+
+#mobile-menu.is-open {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
