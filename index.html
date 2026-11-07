@@ -295,20 +295,123 @@
     </section>
 
     <section class="contact-section container" id="contact">
-      <div class="contact-card">
-        <span class="section-label">HAVE A PROJECT IN MIND?</span>
+      <div class="contact-layout">
+        <!-- LEFT: CONTACT INFORMATION -->
+        <div class="contact-info">
+          <span class="section-label">GET IN TOUCH</span>
 
-        <h2>Let's build something <span>meaningful.</span></h2>
+          <h2>
+            Have a project
+            <span>in mind?</span>
+          </h2>
 
-        <p>
-          Have an idea, a project, or an opportunity? I'd love to hear about it.
-        </p>
+          <p class="contact-description">
+            Have an idea, need a website, or want to discuss an opportunity?
+            Send me a message. I'd be happy to hear about it.
+          </p>
 
-        <a href="mailto:ogunsoaanthony72@gmail.com" class="contact-button">
-          Get in touch <span>↗</span>
-        </a>
+          <div class="contact-direct">
+            <span class="contact-direct-label">PREFER EMAIL?</span>
 
-        <span class="contact-note">I'M OPEN TO PROJECTS & OPPORTUNITIES</span>
+            <a href="mailto:ogunsolaanthony72@gmail.com">
+              ogunsolaanthony72@gmail.com
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div class="contact-availability">
+            <span class="status-dot"></span>
+            OPEN TO PROJECTS & OPPORTUNITIES
+          </div>
+        </div>
+
+        <!-- RIGHT: PROJECT ENQUIRY FORM -->
+        <div class="contact-form-card">
+          <div class="form-heading">
+            <h3>Tell me about your project.</h3>
+            <p>Fill in the details below and I'll get back to you.</p>
+          </div>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xyeeanzq"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="full-name">Full name</label>
+                <input
+                  type="text"
+                  id="full-name"
+                  name="name"
+                  placeholder="Your name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-type">Project type</label>
+                <select id="project-type" name="project_type" required>
+                  <option value="" disabled selected>Select a project</option>
+                  <option value="Business website">Business website</option>
+                  <option value="Portfolio website">Portfolio website</option>
+                  <option value="Landing page">Landing page</option>
+                  <option value="Website redesign">Website redesign</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Estimated budget</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select a range</option>
+                  <option value="Below ₦50,000">Below ₦50,000</option>
+                  <option value="₦50,000 - ₦100,000">₦50,000 - ₦100,000</option>
+                  <option value="₦100,000 - ₦250,000">
+                    ₦100,000 - ₦250,000
+                  </option>
+                  <option value="₦250,000+">₦250,000+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="project-details">Tell me about your project</label>
+              <textarea
+                id="project-details"
+                name="message"
+                rows="5"
+                placeholder="What are you looking to build?"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-submit">
+              Send enquiry <span>↗</span>
+            </button>
+
+            <p class="form-note">
+              I'll review your enquiry and get back to you by email.
+            </p>
+          </form>
+        </div>
       </div>
     </section>
 
