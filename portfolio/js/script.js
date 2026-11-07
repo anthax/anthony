@@ -49,3 +49,48 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach(function (section) {
   sectionObserver.observe(section);
 });
+
+// CONTACT FORM SUBMISSION
+
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+const submitButton = contactForm.querySelector(".form-submit");
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  formStatus.className = "form-status";
+  formStatus.textContent = "";
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      formStatus.textContent =
+        "Your enquiry has been sent successfully. I'll get back to you soon.";
+
+      formStatus.className = "form-status success";
+
+      contactForm.reset();
+    } else {
+      throw new Error("Submission failed");
+    }
+  } catch (error) {
+    formStatus.textContent =
+      "Something went wrong. Please try again or contact me by email.";
+
+    formStatus.className = "form-status error";
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = "Send enquiry <span>↗</span>";
+  }
+});
