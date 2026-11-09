@@ -4,6 +4,7 @@ const navLinks = document.querySelector("#nav-links");
 menuToggle.addEventListener("click", function () {
   const isOpen = navLinks.classList.toggle("active");
 
+  menuToggle.classList.toggle("active", isOpen);
   menuToggle.setAttribute("aria-expanded", isOpen);
 });
 
@@ -12,6 +13,8 @@ const navItems = navLinks.querySelectorAll("a");
 navItems.forEach(function (link) {
   link.addEventListener("click", function () {
     navLinks.classList.remove("active");
+    menuToggle.classList.remove("active");
+
     menuToggle.setAttribute("aria-expanded", "false");
   });
 });
