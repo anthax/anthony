@@ -109,72 +109,144 @@
         </p>
       </div>
 
-      <div class="projects-grid">
-        <!-- NORTHSTAR -->
-        <article class="project-card">
-          <a
-            href="/projects/Northstar Advisory/index.html"
-            class="project-preview northstar-preview"
-          >
-            <img
-              src="/portfolio/assets/images/northstar-preview.png"
-              alt="Northstar Advisory website preview"
-            />
-            <span class="preview-link">View project ↗</span>
-          </a>
+      <!-- PROJECT CATEGORY TABS -->
+      <div class="project-tabs" role="tablist" aria-label="Project categories">
+        <button
+          class="project-tab active"
+          id="mock-tab"
+          role="tab"
+          aria-selected="true"
+          aria-controls="mock-projects"
+        >
+          Mock Projects <span>02</span>
+        </button>
 
-          <div class="project-info">
-            <div>
-              <span class="project-category">BUSINESS WEBSITE</span>
-              <h3>Northstar Advisory</h3>
-              <p>
-                A modern digital presence for a business strategy and consulting
-                firm.
-              </p>
-            </div>
+        <button
+          class="project-tab"
+          id="real-tab"
+          role="tab"
+          aria-selected="false"
+          aria-controls="real-projects"
+          tabindex="-1"
+        >
+          Real Projects <span>00</span>
+        </button>
+      </div>
 
-            <span class="project-number">01</span>
+      <!-- MOCK PROJECTS -->
+      <div
+        class="project-panel active"
+        id="mock-projects"
+        role="tabpanel"
+        aria-labelledby="mock-tab"
+      >
+        <div class="projects-viewport">
+          <div class="projects-track">
+            <!-- NORTHSTAR -->
+            <article class="project-card project-slide">
+              <a
+                href="/projects/Northstar Advisory/index.html"
+                class="project-preview northstar-preview"
+              >
+                <img
+                  src="/portfolio/assets/images/northstar-preview.png"
+                  alt="Northstar Advisory website preview"
+                />
+                <span class="preview-link">View project ↗</span>
+              </a>
+
+              <div class="project-info">
+                <div>
+                  <span class="project-category">BUSINESS WEBSITE</span>
+                  <h3>Northstar Advisory</h3>
+                  <p>
+                    A modern digital presence for a business strategy and
+                    consulting firm.
+                  </p>
+                </div>
+
+                <span class="project-number">01</span>
+              </div>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
+
+            <!-- ARCWELL DIGITAL -->
+            <article class="project-card project-slide">
+              <a
+                href="/projects/Arcwell Digital/index.html"
+                class="project-preview arcwell-preview"
+              >
+                <img
+                  src="/portfolio/assets/images/arcwell-digital-preview.png"
+                  alt="Arcwell Digital website preview"
+                />
+                <span class="preview-link">View project ↗</span>
+              </a>
+
+              <div class="project-info">
+                <div>
+                  <span class="project-category">
+                    TECHNOLOGY & DIGITAL TRANSFORMATION CONSULTING
+                  </span>
+                  <h3>Arcwell Digital</h3>
+                  <p>
+                    Helping ambitious businesses modernise their operations,
+                    adopt the right technologies and build smarter digital
+                    systems.
+                  </p>
+                </div>
+
+                <span class="project-number">02</span>
+              </div>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+            </article>
           </div>
+        </div>
 
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+        <!-- PROJECT CONTROLS -->
+        <div class="project-controls">
+          <span class="project-progress">
+            <span class="current-project">01</span>
+            <span class="progress-divider">/</span>
+            <span class="total-projects">02</span>
+          </span>
+
+          <div class="project-navigation">
+            <button class="project-prev" aria-label="Previous project">
+              ←
+            </button>
+
+            <button class="project-next" aria-label="Next project">→</button>
           </div>
-        </article>
+        </div>
+      </div>
 
-        <!-- KIVO -->
-        <article class="project-card">
-          <a
-            href="/projects/KIVO/index.html"
-            class="project-preview kivo-preview"
-          >
-            <img
-              src="/portfolio/assets/images/kivo-preview.png"
-              alt="Kivo restaurant website preview"
-            />
-            <span class="preview-link">View project ↗</span>
-          </a>
-
-          <div class="project-info">
-            <div>
-              <span class="project-category">RESTAURANT WEBSITE</span>
-              <h3>Kivo</h3>
-              <p>
-                A restaurant website concept designed to showcase a menu and
-                create an engaging experience.
-              </p>
-            </div>
-
-            <span class="project-number">02</span>
-          </div>
-
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-        </article>
+      <!-- REAL PROJECTS -->
+      <div
+        class="project-panel"
+        id="real-projects"
+        role="tabpanel"
+        aria-labelledby="real-tab"
+        hidden
+      >
+        <div class="real-projects-empty">
+          <span class="empty-number">00</span>
+          <h3>Real projects are on the way.</h3>
+          <p>
+            This space is reserved for websites and digital products built for
+            real clients.
+          </p>
+        </div>
       </div>
     </section>
 
